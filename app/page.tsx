@@ -271,8 +271,8 @@ export default function Home() {
                     <a href="#" className="hover:text-red-600">PRIVACY POLICY</a>
                   </div>
                 </div>
-                <p className="font-black text-2xl md:text-3xl text-gray-800 uppercase tracking-tighter leading-none">MUHAMAD RIFQI FADIL ITSNAIN</p>
-                <p className="text-[10px] md:text-[11px] text-zinc-400 uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold mt-3">TEKNIK KOMPUTER - FTUI 2026</p>
+                <p className="font-black text-2xl md:text-3xl text-gray-800 uppercase tracking-tighter leading-none"></p>
+                <p className="text-[10px] md:text-[11px] text-zinc-400 uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold mt-3"></p>
               </div>
 
               <div className="w-full md:w-80">
