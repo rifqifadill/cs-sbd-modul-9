@@ -131,7 +131,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-[90px] font-black text-yellow-400 leading-[0.9] tracking-tighter mb-4 italic uppercase">
                 MUKBANG<br/><span className="text-white">COMPLETE</span>
               </h1>
-              <h2 className="text-lg md:text-2xl font-bold text-zinc-300 mb-8 uppercase tracking-widest italic">Perut Full Nugas Jadi Powerfull!</h2>
+              <h2 className="text-lg md:text-2xl font-bold text-zinc-300 mb-8 uppercase tracking-widest italic">Perut Full, Nugas Jadi Powerfull!</h2>
               <div className="inline-block bg-black/60 backdrop-blur-sm p-7 rounded-3xl border border-white/10 shadow-2xl text-left w-full sm:w-auto">
                 <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-end">
                   <ul className="text-white text-base md:text-lg space-y-2 font-medium">
