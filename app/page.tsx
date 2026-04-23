@@ -55,13 +55,13 @@ export default function Home() {
         <nav className="bg-white/80 backdrop-blur-lg border-b border-gray-100 h-20 md:h-24 transition-all duration-300">
           <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full max-w-7xl">
             
-            <div className="bg-[#da251d] h-full w-24 md:w-36 flex flex-col items-center justify-center cursor-pointer shadow-md">
+            <div className="bg-[#da251d] h-full w-24 md:w-36 flex flex-col items-center justify-center cursor-pointer shadow-md rounded-b-2xl">
               <span className="text-white font-bold italic text-lg md:text-3xl leading-none">Richeese</span>
-              <span className="text-yellow-400 font-bold text-[8px] md:text-[12px] tracking-widest uppercase">Factory</span>
+              <span className="text-yellow-400 font-bold text-[8px] md:text-[12px] tracking-widest uppercase mt-1">Factory</span>
             </div>
 
             <div className="hidden lg:flex items-center gap-12">
-              <div className="flex space-x-10 text-base md:text-xl font-black tracking-widest text-[#7a1811]">
+              <div className="flex space-x-10 text-sm md:text-base font-semibold tracking-widest text-[#7a1811]">
                 <a href="#menu" className="hover:text-red-600 transition-colors">OUR MENU</a>
                 <a href="#promo" className="hover:text-red-600 transition-colors">PROMO</a>
                 <a href="#vip" className="hover:text-red-600 transition-colors">MEMBER</a>
@@ -70,7 +70,7 @@ export default function Home() {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#da251d] text-white px-10 py-3 rounded-full font-black text-base tracking-widest uppercase hover:bg-red-700 transition shadow-lg shadow-red-600/30"
+                className="bg-[#da251d] text-white px-8 py-2.5 rounded-full font-semibold text-sm tracking-widest uppercase hover:bg-red-700 transition shadow-lg shadow-red-600/30"
               >
                 Order Now
               </motion.button>
@@ -79,7 +79,7 @@ export default function Home() {
             <div className="lg:hidden flex items-center gap-4">
               <motion.button 
                 whileTap={{ scale: 0.9 }}
-                className="bg-[#da251d] text-white px-5 py-2 rounded-full font-black text-[10px] uppercase tracking-widest"
+                className="bg-[#da251d] text-white px-5 py-2 rounded-full font-semibold text-[10px] uppercase tracking-widest"
               >
                 Order
               </motion.button>
@@ -101,7 +101,7 @@ export default function Home() {
                 exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-2xl overflow-hidden"
               >
-                <div className="flex flex-col items-center py-8 gap-8 font-black text-[#7a1811] tracking-[0.2em] text-xl">
+                <div className="flex flex-col items-center py-8 gap-8 font-semibold text-[#7a1811] tracking-[0.2em] text-lg">
                   <a href="#menu" onClick={() => setIsMenuOpen(false)}>OUR MENU</a>
                   <a href="#promo" onClick={() => setIsMenuOpen(false)}>PROMO</a>
                   <a href="#vip" onClick={() => setIsMenuOpen(false)}>MEMBER</a>
@@ -240,54 +240,89 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="bg-white pt-12 md:pt-20 border-t border-gray-100 mt-auto pb-0">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
-            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 mb-16 text-center md:text-left">
-              <div className="flex flex-col items-center md:items-start gap-6">
-                <div className="bg-[#da251d] w-20 h-20 flex items-center justify-center rounded-2xl shadow-xl">
-                  <span className="text-white font-bold italic text-xs leading-none text-center">Richeese<br/><span className="text-yellow-400 text-[10px]">Factory</span></span>
+        <footer className="relative bg-white pt-16 md:pt-24 border-t border-gray-200 mt-auto pb-0 overflow-hidden">
+          <div 
+            className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-cover bg-center bg-no-repeat grayscale"
+            style={{ backgroundImage: 'url("/assets/outlet.png"), url("/assets/outlet.jpg")' }}
+          ></div>
+          
+          <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl mb-12 md:mb-16 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 text-left">
+              
+              <div className="flex flex-col items-start gap-6">
+                <div className="bg-[#da251d] w-24 h-24 flex items-center justify-center rounded-2xl shadow-lg">
+                  <span className="text-white font-bold italic text-sm leading-none text-center">Richeese<br/><span className="text-yellow-400 text-[10px]">Factory</span></span>
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-11 h-11 bg-red-600 text-white rounded-full flex items-center justify-center font-black text-[11px] tracking-tighter cursor-pointer hover:bg-black transition-all">
-                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                  </div>
-                  <div className="w-11 h-11 bg-red-600 text-white rounded-full flex items-center justify-center font-black text-[11px] tracking-tighter cursor-pointer hover:bg-black transition-all">
-                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-                  </div>
-                  <div className="w-11 h-11 bg-red-600 text-white rounded-full flex items-center justify-center font-black text-[11px] tracking-tighter cursor-pointer hover:bg-black transition-all">
-                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-center text-center">
-                <div className="flex gap-8 justify-center text-[10px] font-black text-gray-400 uppercase tracking-widest border-b border-gray-100 pb-6 mb-6">
-                  <div className="flex flex-col gap-2">
-                    <a href="#" className="hover:text-red-600">CONTACT US</a>
-                    <a href="#" className="hover:text-red-600">DISCOVERY</a>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <a href="#" className="hover:text-red-600">BIG ORDER</a>
-                    <a href="#" className="hover:text-red-600">PRIVACY POLICY</a>
-                  </div>
-                </div>
-                <p className="font-black text-2xl md:text-3xl text-gray-800 uppercase tracking-tighter leading-none"></p>
-                <p className="text-[10px] md:text-[11px] text-zinc-400 uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold mt-3"></p>
-              </div>
-
-              <div className="w-full md:w-80">
-                <p className="text-[10px] md:text-[11px] font-black text-gray-800 uppercase tracking-widest mb-3 flex items-center justify-center md:justify-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-600 inline-block animate-pulse"></span>
-                  OUTLET MARGONDA DEPOK
+                <p className="text-zinc-500 text-xs md:text-sm leading-relaxed">
+                  Pioneer of crispy chicken with delicious cheese sauce in Indonesia. Quick Service Restaurant with the best quality.
                 </p>
-                <div className="h-40 rounded-3xl overflow-hidden border border-gray-200 shadow-inner">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.232371900135!2d106.83002621537248!3d-6.364234064032768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec111f185dbb%3A0x1a87796d11626f2f!2sRicheese%20Factory%20Margonda!5e0!3m2!1sen!2sid!4v1682390884000!5m2!1sen!2sid" className="w-full h-full grayscale opacity-80" style={{ border: 0 }}></iframe>
+                <div className="flex gap-3">
+                  <a href="#" className="w-10 h-10 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center hover:bg-[#da251d] hover:text-white transition-all shadow-sm">
+                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center hover:bg-[#da251d] hover:text-white transition-all shadow-sm">
+                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-zinc-100 text-zinc-600 rounded-full flex items-center justify-center hover:bg-[#da251d] hover:text-white transition-all shadow-sm">
+                    <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </a>
                 </div>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <h4 className="font-black text-[#7a1811] text-sm uppercase tracking-widest mb-2">Perusahaan</h4>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Tentang Kami</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Karier</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Lokasi Outlet</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Berita & Promo</a>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <h4 className="font-black text-[#7a1811] text-sm uppercase tracking-widest mb-2">Bantuan & Hukum</h4>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Syarat & Ketentuan</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Kebijakan Privasi</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Kritik & Saran</a>
+                <a href="#" className="text-zinc-500 hover:text-[#da251d] text-sm font-medium transition-colors">Pusat Bantuan</a>
+              </div>
+
+              <div className="flex flex-col gap-4 w-full">
+                <h4 className="font-black text-[#7a1811] text-sm uppercase tracking-widest mb-2">Hubungi Kami</h4>
+                <div className="flex items-start gap-3 text-zinc-500 text-sm font-medium">
+                  <svg className="w-5 h-5 text-red-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>Jl. Margonda Raya No. 427, Pondok Cina, Kec. Beji, Kota Depok, Jawa Barat 16424</span>
+                </div>
+                <div className="flex items-center gap-3 text-zinc-500 text-sm font-medium">
+                  <svg className="w-5 h-5 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <span>1500220 (Customer Service)</span>
+                </div>
+                <div className="flex items-center gap-3 text-zinc-500 text-sm font-medium">
+                  <svg className="w-5 h-5 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span>hello@richeesefactory.com</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div className="bg-zinc-50 border-t border-gray-200 py-6 relative z-10">
+            <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-zinc-500 text-[10px] md:text-xs font-medium">© 2026 PT Richeese Kuliner Indonesia. All rights reserved.</p>
+              <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-[10px] md:text-xs font-medium text-zinc-500">
+                <a href="#" className="hover:text-red-600 transition">Kebijakan Privasi</a>
+                <a href="#" className="hover:text-red-600 transition">Syarat Penggunaan</a>
+                <a href="#" className="hover:text-red-600 transition">Peta Situs</a>
               </div>
             </div>
           </div>
-          <div className="bg-[#fce029] py-5 text-[#5e2115] font-black text-center text-[8px] md:text-[10px] tracking-[0.4em] uppercase border-t border-yellow-500 shadow-inner">
-            © 2026 RICHEESE FACTORY INDONESIA - FTUI INTERNSHIP PROJECT
+
+          <div className="w-full h-64 md:h-80 grayscale opacity-80 hover:grayscale-0 transition-all duration-700 overflow-hidden shadow-inner relative z-10">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.24430489222!2d106.8332152!3d-6.3624391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec0db2077e6b%3A0xe212879659092928!2sRicheese%20Factory%20Margonda!5e0!3m2!1sen!2sid!4v1713880193125!5m2!1sen!2sid" 
+              className="w-full h-full border-0" 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </footer>
       </div>
@@ -307,7 +342,7 @@ export default function Home() {
               <button onClick={() => setSelectedPromo(null)} className="absolute top-4 md:top-8 right-6 md:right-10 text-zinc-600 hover:text-white font-black text-3xl md:text-4xl">×</button>
               <img src={selectedPromo.image} alt={selectedPromo.title} className="w-full max-h-48 md:max-h-72 object-contain rounded-3xl mb-10 bg-black/40 p-2" />
               <span className={`${selectedPromo.labelBg} px-4 md:px-6 py-1 md:py-1.5 rounded-full font-black text-[8px] md:text-[10px] uppercase tracking-widest`}>{selectedPromo.label}</span>
-              <h2 className="text-2xl md:text-5xl font-black text-white mt-4 md:mt-6 mb-4 uppercase italic tracking-tighter">{selectedPromo.title}</h2>
+              <h2 className="text-2xl md:text-5xl font-black text-white mt-4 md:mt-6 mb-3 md:mb-4 uppercase italic tracking-tighter">{selectedPromo.title}</h2>
               <p className="text-zinc-500 text-xs md:text-sm mb-8 md:mb-12 max-w-md leading-relaxed mx-auto">{selectedPromo.description}</p>
               <button className={`w-full md:w-auto px-10 md:px-16 py-3 md:py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] shadow-xl ${selectedPromo.id === 2 ? 'bg-red-600 text-white' : 'bg-white text-black'}`}>
                 {selectedPromo.buttonText}
