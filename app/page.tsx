@@ -176,7 +176,7 @@ export default function Home() {
               <img src="/assets/eskrim-choco.jpg" alt="Ice Cream" className="w-48 md:w-64 h-48 md:h-64 object-cover rounded-full shadow-xl border-4 border-white" />
             </motion.div>
             <div className="w-full md:w-1/2 text-center md:text-left z-10">
-              <span className="bg-[#5e2115] text-white px-3 md:px-4 py-1.5 rounded-full text-[8px] md:text-[10px] font-black tracking-widest uppercase">Best for Coding Night</span>
+              <span className="bg-[#5e2115] text-white px-3 md:px-4 py-1.5 rounded-full text-[8px] md:text-[10px] font-black tracking-widest uppercase">Cocok Untuk Nugas Malam</span>
               <h3 className="text-4xl md:text-6xl font-black text-[#5e2115] mt-4 md:mt-5 mb-2 tracking-tighter italic leading-none">RICHOCO DINO</h3>
               <p className="text-lg md:text-xl text-[#5e2115]/70 font-bold uppercase tracking-widest">HANYA <span className="text-4xl md:text-5xl font-black text-[#5e2115]">Rp 13<span className="text-2xl md:text-3xl">.636</span></span></p>
             </div>
